@@ -1,7 +1,8 @@
 const app = require("express").Router()
 let db = require("../db/db.json")
 const fs = require("fs")
-//CRUD - Create REad Update Delete
+
+//CRUD - Create Read Update Delete
 
 app.get("/api/notes", (req, res) => {
     db = JSON.parse(fs.readFileSync("./db/db.json")) || []
